@@ -1,16 +1,15 @@
-package com.reactive;
+package org.wildcraft.util.reactive;
 
+import org.testng.annotations.Test;
+
+import java.util.Arrays;
 import java.util.concurrent.SubmissionPublisher;
-import java.util.*;
-import com.reactive.subscriber.MySubscriber;
 
-/**
- * Created by NAS on 26-01-2017.
- */
-public class Main  {
+@Test
+public class ReactiveTest {
 
-    public static void main(String[] args) {
-        
+    @Test
+    public void testPublishAndSubscribe() {
         //Create Publisher
         SubmissionPublisher<String> publisher = new SubmissionPublisher<>();
 
@@ -22,11 +21,10 @@ public class Main  {
 
         System.out.println("Publishing Items...");
         publisher.submit("2");
-        
+
         String[] items = {"1","2","x","x","3"};
 
         Arrays.asList(items).stream().forEach(i->{System.out.println(i+" is submitted"); publisher.submit(i);});
-         publisher.close();
+        publisher.close();
     }
-
 }

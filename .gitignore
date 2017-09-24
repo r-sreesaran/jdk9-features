@@ -10,6 +10,9 @@
 
 # Intellij Files #
 *.iml
+*.idea
+.idea\vcs.xml
+api\log\*
 
 # Maven Target #
 \target

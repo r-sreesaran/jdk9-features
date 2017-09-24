@@ -12,6 +12,7 @@
         <module>../api</module>
         <module>../lang</module>
         <module>../concepts</module>
+        <module>../tooling</module>
     </modules>
 
     <properties>

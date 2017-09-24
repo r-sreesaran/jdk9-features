@@ -1,13 +1,13 @@
-package com.reactive.subscriber;
+package org.wildcraft.util.reactive;
 
-import java.util.concurrent.Flow.*;
+import java.util.concurrent.Flow;
 
-public class MySubscriber<T> implements Subscriber<T> {
-	
-	private Subscription subscription;
+public class MySubscriber<T> implements Flow.Subscriber<T> {
+
+    private Flow.Subscription subscription;
 
 	@Override
-	public void onSubscribe(Subscription subscription) {
+	public void onSubscribe(Flow.Subscription subscription) {
 		this.subscription = subscription;
 		System.out.println("onSubscribe");
 		subscription.request(1);
