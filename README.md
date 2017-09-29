@@ -1,9 +1,9 @@
 # jdk9-features
 
 This project mainly focuses on testing features of JDK 9.
-Main objective of the project is to add test cases for as much as use cases possible for Java 9 features. 
+The Main objective of the project is to add test cases for as much as use cases possible for Java 9 features. 
 
-Before using any new feature many use to write a simple ad-hoc proof of concept program in a main method, this small adhoc program does not always remain managable to refer later point of time. so having it as test cases could help anyone to refer back again and again and if anything missed out one can be add a new test case. This form the idea behind this project.
+Before using any new feature many use to write a simple ad-hoc proof of concept program in a main method, this small ad-hoc program does not always remain managable to refer it at a later point of time. so having it as test cases could help anyone to refer back again and again and if anything is missed out, one can add a new test case and enrich the resource. This form the idea behind this project.
 
 Similar to <a href="http://www.oracle.com/technetwork/java/javase/tech/index.html">Technology Classification</a> this projects classifies various features of JDK 9 into categories and separate them into maven modules.
 
