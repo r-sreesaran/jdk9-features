@@ -8,11 +8,11 @@ Before using any new feature many use to write a simple ad-hoc proof of concept 
 Similar to (Technology Classification)[http://www.oracle.com/technetwork/java/javase/tech/index.html] this projects classifies various features of JDK 9 into categories and separate them into maven modules.
 
 The following modules are currently present in jdk9-features project.
-###1. api 
+1. api: 
 Test cases for any JDK 9 general API other than core language API can be added in this module.
-###2. concepts
+2. concepts:
 Test cases for programming concepts like functional programming or reactive programming etc., can be added with appropriate use cases and iwiki page in this module.
-###3. lang
+3. lang:
 Test cases for core language constructs and API can be added in this module.
-###4. tooling
+4. tooling:
 Test cases for tools such as java, javac, jshell can be added in this module.
