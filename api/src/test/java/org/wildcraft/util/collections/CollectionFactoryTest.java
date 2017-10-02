@@ -21,7 +21,7 @@ public class CollectionFactoryTest {
      * In Java 8 - Create modifiable list and make it unmodifiable
      */
     @Test(enabled=true)
-    public void testCreateCollectionInJava8() {
+    public void testCreateCollectionWithoutEnhancement() {
         List<String> emptyList = new ArrayList<>();
         emptyList.add("one");
         emptyList.add("two");
