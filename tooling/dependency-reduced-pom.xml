@@ -59,6 +59,7 @@
         <version>3.0.0-alpha-1</version>
         <extensions>true</extensions>
         <configuration>
+          <jmodFile>target/jmods/org.wildcraft.tooling.jmod</jmodFile>
           <modulePath>target/original-tooling-1.0-SNAPSHOT.jar</modulePath>
         </configuration>
       </plugin>

@@ -12,7 +12,7 @@
 *.iml
 *.idea
 .idea\vcs.xml
-api\log\*
+Console.log
 
 # Maven Target #
 \target
