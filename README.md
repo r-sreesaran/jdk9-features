@@ -1,4 +1,4 @@
-# jdk9-features
+# jdk9-features [![Build Status](https://travis-ci.org/Wildcraft/jdk9-features.svg?branch=master)](https://travis-ci.org/Wildcraft/jdk9-features)
 
 This project mainly focuses on testing features of JDK 9.
 The Main objective of the project is to add test cases for all possible use cases of Java 9 features. 
