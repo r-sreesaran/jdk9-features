@@ -30,7 +30,7 @@ public class StreamTest {
                 .dropWhile(s -> s.length() <= 1).forEach(System.out::print);
     }
 
-    @Test
+    @Test(enabled=false)
     public void testIterateUnstoppableInJava8() {
         Stream.iterate(1, i -> 2 * i)
                 .filter(i->i<=10)
