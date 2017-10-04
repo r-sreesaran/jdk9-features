@@ -23,12 +23,12 @@ public class TryWithResourceTest {
 
     private URI fileURI;
 
-    @BeforeTest
+    @BeforeTest(enabled = false)
     public void init() throws URISyntaxException {
         fileURI = Thread.currentThread().getContextClassLoader().getResource(filePath).toURI();
     }
 
-    @Test
+    @Test(enabled = false)
     public void testTryWithResource() {
         String fileContent = null;
         try (FileReader fileReader = new FileReader(new File(fileURI));
@@ -46,7 +46,7 @@ public class TryWithResourceTest {
         Assert.assertEquals(fileContent, "Hello World!!!");
     }
 
-    @Test
+    @Test(enabled = false)
     public void testTryWithEffectivelyFinalResource() {
         String fileContent = null;
         try {
