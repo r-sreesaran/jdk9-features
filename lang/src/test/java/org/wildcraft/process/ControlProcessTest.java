@@ -9,7 +9,7 @@ import static java.lang.System.out;
 @Test
 public class ControlProcessTest {
 
-    @Test
+    @Test(enabled=false)
     public void testContorlProcess() throws IOException, InterruptedException {
         Process sleeper = Runtime.getRuntime().exec("timeout 60");
 
