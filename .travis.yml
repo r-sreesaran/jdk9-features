@@ -1,6 +1,6 @@
 language: java
 sudo: false
-script: mvn -f parent/pom.xml package
+script: mvn -f parent/pom.xml deploy
 dist: trusty
 jdk: oraclejdk9
 addons:  
