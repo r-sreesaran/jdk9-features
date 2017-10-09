@@ -1,6 +1,6 @@
 language: java
 sudo: false
-script: mvn -f parent/pom.xml deploy
+script: "cp .travis.settings.xml $HOME/.m2/settings.xml && mvn -f parent/pom.xml deploy"
 dist: trusty
 jdk: oraclejdk9
 addons:  
