@@ -1,0 +1,16 @@
+group = 'org.wildcraft.jpms'
+description = ''
+ext.moduleName = 'org.wildcraft.jpms.implicit.usergroup.api'
+dependencies {
+    compile project(':jpms:versioning')
+    compile project(':jpms:implicit-dependency:user-api')
+}
+compileJava {
+    inputs.property("moduleName", moduleName)
+    doFirst {
+        options.compilerArgs = [
+                '--module-path', classpath.asPath,
+        ]
+        classpath = files()
+    }
+}

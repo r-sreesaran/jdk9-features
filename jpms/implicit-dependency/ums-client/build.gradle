@@ -1,0 +1,15 @@
+group = 'org.wildcraft.jpms'
+description = ''
+ext.moduleName = 'org.wildcraft.jpms.implicit.ums.client'
+dependencies {
+    compile project(':jpms:implicit-dependency:ums-api')
+}
+compileJava {
+    inputs.property("moduleName", moduleName)
+    doFirst {
+        options.compilerArgs = [
+                '--module-path', classpath.asPath,
+        ]
+        classpath = files()
+    }
+}

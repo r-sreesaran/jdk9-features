@@ -1,0 +1,15 @@
+group = 'org.wildcraft.jpms'
+description = ''
+ext.moduleName = 'org.wildcraft.jpms.spi.customer'
+dependencies {
+    compile project(':jpms:spi:agent')
+}
+compileJava {
+    inputs.property("moduleName", moduleName)
+    doFirst {
+        options.compilerArgs = [
+                '--module-path', classpath.asPath,
+        ]
+        classpath = files()
+    }
+}

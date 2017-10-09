@@ -1,0 +1,15 @@
+group = 'org.wildcraft.jpms'
+description = ''
+dependencies {
+  compile project(':jpms:automodule:caz')
+}
+ext.moduleName = 'org.wildcraft.jpms.testmodule.caztest'
+compileJava {
+  inputs.property("moduleName", moduleName)
+  doFirst {
+    options.compilerArgs = [
+            '--module-path', classpath.asPath,
+    ]
+    classpath = files()
+  }
+}

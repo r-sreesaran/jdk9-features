@@ -1,0 +1,15 @@
+
+description = ''
+dependencies {
+  compile project(':jpms:simple-dependency:aaz')
+}
+ext.moduleName = 'org.wildcraft.jpms.simple.baz'
+compileJava {
+  inputs.property("moduleName", moduleName)
+  doFirst {
+    options.compilerArgs = [
+            '--module-path', classpath.asPath,
+    ]
+    classpath = files()
+  }
+}

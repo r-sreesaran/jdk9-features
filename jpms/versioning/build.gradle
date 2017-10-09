@@ -1,0 +1,12 @@
+group = 'org.wildcraft.jpms'
+description = ''
+ext.moduleName = 'org.wildcraft.jpms.versioning.api'
+compileJava {
+    inputs.property("moduleName", moduleName)
+    doFirst {
+        options.compilerArgs = [
+                '--module-path', classpath.asPath,
+        ]
+        classpath = files()
+    }
+}

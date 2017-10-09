@@ -1,0 +1,51 @@
+rootProject.name = 'parent'
+include ':api'
+include ':lang'
+include ':concepts'
+include ':tooling'
+include ':jpms:simple-dependency:aaz'
+include ':jpms:simple-dependency:baz'
+include ':jpms:simple-dependency'
+include ':jpms:automodule:caz'
+include ':jpms:automodule'
+include ':jpms:testmodule:caztest'
+include ':jpms:testmodule'
+include ':jpms:versioning'
+include ':jpms:implicit-dependency:user-api'
+include ':jpms:implicit-dependency:usergroup-api'
+include ':jpms:implicit-dependency:ums-api'
+include ':jpms:implicit-dependency:ums-client'
+include ':jpms:implicit-dependency'
+include ':jpms:spi:customer'
+include ':jpms:spi:vendor-with-provider'
+include ':jpms:spi:vendor'
+include ':jpms:spi:agent'
+include ':jpms:spi'
+include ':jpms:optional-dependency'
+include ':jpms'
+
+project(':api').projectDir = "$rootDir/../api" as File
+project(':lang').projectDir = "$rootDir/../lang" as File
+project(':concepts').projectDir = "$rootDir/../concepts" as File
+project(':tooling').projectDir = "$rootDir/../tooling" as File
+project(':jpms:simple-dependency:aaz').projectDir = "$rootDir/../jpms/simple-dependency/aaz" as File
+project(':jpms:simple-dependency:baz').projectDir = "$rootDir/../jpms/simple-dependency/baz" as File
+project(':jpms:simple-dependency').projectDir = "$rootDir/../jpms/simple-dependency" as File
+project(':jpms:automodule:caz').projectDir = "$rootDir/../jpms/automodule/caz" as File
+project(':jpms:automodule').projectDir = "$rootDir/../jpms/automodule" as File
+project(':jpms:testmodule:caztest').projectDir = "$rootDir/../jpms/testmodule/caztest" as File
+project(':jpms:testmodule').projectDir = "$rootDir/../jpms/testmodule" as File
+project(':jpms:versioning').projectDir = "$rootDir/../jpms/versioning" as File
+project(':jpms:implicit-dependency:user-api').projectDir = "$rootDir/../jpms/implicit-dependency/user-api" as File
+project(':jpms:implicit-dependency:usergroup-api').projectDir = "$rootDir/../jpms/implicit-dependency/usergroup-api" as File
+project(':jpms:implicit-dependency:ums-api').projectDir = "$rootDir/../jpms/implicit-dependency/ums-api" as File
+project(':jpms:implicit-dependency:ums-client').projectDir = "$rootDir/../jpms/implicit-dependency/ums-client" as File
+project(':jpms:implicit-dependency').projectDir = "$rootDir/../jpms/implicit-dependency" as File
+project(':jpms:versioning').projectDir = "$rootDir/../jpms/versioning" as File
+project(':jpms:spi:customer').projectDir = "$rootDir/../jpms/spi/customer" as File
+project(':jpms:spi:vendor-with-provider').projectDir = "$rootDir/../jpms/spi/vendor-with-provider" as File
+project(':jpms:spi:vendor').projectDir = "$rootDir/../jpms/spi/vendor" as File
+project(':jpms:spi:agent').projectDir = "$rootDir/../jpms/spi/agent" as File
+project(':jpms:spi').projectDir = "$rootDir/../jpms/spi" as File
+project(':jpms:optional-dependency').projectDir = "$rootDir/../jpms/optional-dependency" as File
+project(':jpms').projectDir = "$rootDir/../jpms" as File

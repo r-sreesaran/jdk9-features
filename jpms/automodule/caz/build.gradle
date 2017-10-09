@@ -1,0 +1,46 @@
+group = 'org.wildcraft.jpms'
+description = ''
+dependencies {
+    compile group: 'com.google.guava', name: 'guava', version:'23.1-jre'
+}
+ext.moduleName = 'org.wildcraft.jpms.automodule.caz'
+compileJava {
+    inputs.property("moduleName", moduleName)
+    doFirst {
+        options.compilerArgs = [
+                '--module-path', classpath.asPath,
+        ]
+        classpath = files()
+    }
+}
+/*compileTestJava {
+    inputs.property("moduleName", moduleName)
+    doFirst {
+        options.compilerArgs = [
+                '--module-path', classpath.asPath,
+                '--add-modules', 'junit',
+                '--add-reads', "$moduleName=junit",
+                '--patch-module', "$moduleName=" + files(sourceSets.test.java.srcDirs).asPath,
+        ]
+        classpath = files()
+    }
+}*/
+
+/*
+test {
+    inputs.property("moduleName", moduleName)
+    doFirst {
+        jvmArgs = [
+                '--module-path', classpath.asPath,
+                '--add-modules', 'ALL-MODULE-PATH',
+                '--add-opens', 'io.github.sskorol/io.github.sskorol.testcases=testng',
+                '--add-opens', 'io.github.sskorol/io.github.sskorol.testcases=joor',
+                '--add-opens', 'io.github.sskorol/io.github.sskorol.datasuppliers=joor',
+                '--add-opens', 'io.github.sskorol/io.github.sskorol.datasuppliers=testng',
+                '--add-opens', 'java.base/java.util=streamex',
+                '--add-opens', 'java.base/java.util.stream=streamex',
+                '--patch-module', "$moduleName=" + files(sourceSets.test.java.outputDir).asPath
+        ]
+        classpath = files()
+    }
+}*/
